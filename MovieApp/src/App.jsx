@@ -1,11 +1,9 @@
 import './App.css'
 
 function App() {
-
   return (
     <>
-      <Navbar/>
-      <Footer/>
+      Merhaba arkadaşlar
     </>
   )
 }
