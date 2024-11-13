@@ -18,8 +18,16 @@ export const movieDetailSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {  // HTTP Request
+        builder.addCase(getMovieDetailById.pending, (state, action) => {
+            state.status = action.meta.requestStatus;
+        })
         builder.addCase(getMovieDetailById.fulfilled, (state, action) => {
+            state.status = action.meta.requestStatus;
             state.movieDetail = action.payload;
+        })
+        builder.addCase(getMovieDetailById.rejected, (state, action) => {
+            state.status = action.meta.requestStatus;
+            state.error = action.error.message;
         })
     }
 })

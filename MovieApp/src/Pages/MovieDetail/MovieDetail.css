@@ -35,11 +35,6 @@
     width: 70%;
 }
 
-.add-favorite-remove .btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
 
 .add-favorite-remove .btn span:first-child {
     display: flex;
@@ -217,4 +212,44 @@
 
 .movie-detail .movie-info .movie-languages {
     display: flex;
+}
+
+.movie-detail .loading-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-remove-favorite button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 2px;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all .3s;
+    outline: none;
+    color: #dedede;
+}
+
+.add-remove-favorite .add-btn {
+    box-shadow: 0 0 0 1px #fc0;
+}
+
+.add-remove-favorite .add-btn:hover {
+    background-color: #fc0;
+    color: black;
+}
+
+.add-remove-favorite .remove-btn {
+    box-shadow: 0 0 0 1px #c20000;
+}
+
+.add-remove-favorite .remove-btn:hover {
+    background-color: #c20000;
+    color: #000000
 }
