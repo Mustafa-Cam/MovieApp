@@ -4,7 +4,11 @@ import { TiHome } from "react-icons/ti";
 import { FaHeart } from "react-icons/fa";
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Navbar = () => {
+
+    const favoriteCounter = useSelector(store => store.favorites.favoriteMovies.length)
+
   return (
     <nav className="navbar">
         <div className="left">
@@ -25,6 +29,7 @@ const Navbar = () => {
                 <li>
                     <Link to="/my-list">
                         <FaHeart/>
+                        <div className='favorite-count'>{favoriteCounter}</div>
                     </Link>    
                 </li>
             </ul>
